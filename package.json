@@ -1,5 +1,5 @@
 {
-  "name": "SolxArena",
+  "name": "sol-arena-marketing",
   "scripts": {
     "build": "next build",
     "ci": "npm run build && npm run lint && npm run format:check",
@@ -7,6 +7,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "next lint",
+    "serve": "npx serve . -p 3001",
+    "preview": "python -m http.server 3001",
     "start": "next start"
   },
   "description": "Next.js, Tailwind, gill (based on @solana/kit), Wallet UI",

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOL ARENA - Battle Royale</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <meta name="description" content="The ultimate battle royale on Solana. Hold tokens, enter the arena, survive the chaos.">
+    <meta property="og:title" content="SOL ARENA -  Battle Royale">
+    <meta property="og:description" content="The ultimate battle royale on Solana. Hold tokens, enter the arena, survive the chaos.">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-sol">SOL</span>
+                    <span class="title-arena">ARENA</span>
+                </h1>
+                <p class="hero-subtitle">Battle Royale</p>
+                <p class="hero-description">
+                    The ultimate high-speed battle royale where token holders are entered automatically. 
+                    Survive the chaos, dominate the arena, claim victory.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://pump.fun/live/GSLndYGurTE25vsJEz8xK38KmrBZXhScDNmsPBmARENA" target="_blank" class="btn btn-primary">
+                        <span>🎬 WATCH LIVE</span>
+                    </a>
+                    <a href="#how-it-works" class="btn btn-secondary">
+                        <span>📖 LEARN MORE</span>
+                    </a>
+                </div>
+                <div class="contract-capsule">
+                    <div class="contract-label">Contract Address:</div>
+                    <div class="contract-address" id="contractAddress">GSLndYGurTE25vsJEz8xK38KmrBZXhScDNmsPBmARENA</div>
+                    <button class="copy-btn" onclick="copyContract()" title="Copy to clipboard">
+                        <span id="copyIcon">📋</span>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Players supported</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100</div>
+                        <div class="stat-label">Starting HP</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">Winner</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <img src="xxxiii-coin.png" alt="XXXIII Token" class="token-icon">
+                    </div>
+                    <h3>Hold Tokens</h3>
+                    <p> $XXXII tokens above the minimum threshold (default 0.001% of supply) to qualify for entry.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">🎯</div>
+                    <h3>Enter Arena</h3>
+                    <p>Connect your wallet and join the battle. All eligible token holders are automatically detected.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">⚡</div>
+                    <h3>Survive Chaos</h3>
+                    <p>Navigate high-speed collisions, corner bumpers, and velocity-based damage. Last player standing wins!</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">🏆</div>
+                    <h3>Claim Victory</h3>
+                    <p>Eliminate all opponents through strategic movement and collision damage to become the ultimate champion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Rules Section -->
+    <section id="rules" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Game Rules</h2>
+            <div class="rules-grid">
+                <div class="rule-category">
+                    <h3>🎮 Core Mechanics</h3>
+                    <ul class="rule-list">
+                        <li><strong>100 HP Start:</strong> Every player begins with 100 health points</li>
+                        <li><strong>Velocity Damage:</strong> Collision damage = combined velocity × 0.5</li>
+                        <li><strong>Damage Cap:</strong> Maximum 25 HP damage per collision</li>
+                        <li><strong>Elastic Bouncing:</strong> Players ping off each other - no sticking!</li>
+                        <li><strong>Speed Scaling:</strong> Base speed 35, max speed 200 units</li>
+                    </ul>
+                </div>
+                <div class="rule-category">
+                    <h3>🔺 Arena Features</h3>
+                    <ul class="rule-list">
+                        <li><strong>Corner Bumpers:</strong> Triangle launchers deal 8% damage + catapult</li>
+                        <li><strong>Chaos Mode:</strong> 2.5× speed boost when ≤100 players remain</li>
+                        <li><strong>Power-ups:</strong> Speed, damage, shield, and health boosts</li>
+                        <li><strong>Damage Traps:</strong> Red zones that deal percentage damage</li>
+                        <li><strong>Dynamic Scaling:</strong> Player size increases as others are eliminated</li>
+                    </ul>
+                </div>
+                <div class="rule-category">
+                    <h3>🎯 Victory Conditions</h3>
+                    <ul class="rule-list">
+                        <li><strong>Last Standing:</strong> Be the final player with HP > 0</li>
+                        <li><strong>Elimination:</strong> Players eliminated when HP reaches 0</li>
+                        <li><strong>No Respawns:</strong> One life per game - make it count!</li>
+                        <li><strong>Winner Takes All:</strong> Ultimate bragging rights + glory</li>
+                        <li><strong>Spectate Mode:</strong> Watch the chaos unfold after elimination</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Modes Section -->
+    <section id="modes" class="section">
+        <div class="container">
+            <h2 class="section-title">Game Modes</h2>
+            <div class="modes-grid">
+                <div class="mode-card active">
+                    <div class="mode-icon">🏟️</div>
+                    <h3>Arena</h3>
+                    <div class="mode-status available">Available Now</div>
+                    <p>Classic battle royale with corner bumpers, power-ups, and velocity-based combat. Survive the chaos!</p>
+                    <ul class="mode-features">
+                        <li>✅ High-speed collisions</li>
+                        <li>✅ Corner bumper catapults</li>
+                        <li>✅ Power-up system</li>
+                        <li>✅ Chaos mode endgame</li>
+                    </ul>
+                </div>
+                <div class="mode-card locked">
+                    <div class="mode-icon">🏁</div>
+                    <h3>Race</h3>
+                    <div class="mode-status locked">Coming Soon</div>
+                    <p>Speed-focused mode with checkpoints and racing mechanics. First to finish wins!</p>
+                    <ul class="mode-features">
+                        <li>🔒 Checkpoint system</li>
+                        <li>🔒 Speed boosts</li>
+                        <li>🔒 Racing circuits</li>
+                        <li>🔒 Time trials</li>
+                    </ul>
+                </div>
+                <div class="mode-card locked">
+                    <div class="mode-icon">🚪</div>
+                    <h3>Escape</h3>
+                    <div class="mode-status locked">Coming Soon</div>
+                    <p>Survival mode with shrinking arena and environmental hazards. Escape or perish!</p>
+                    <ul class="mode-features">
+                        <li>🔒 Shrinking boundaries</li>
+                        <li>🔒 Environmental hazards</li>
+                        <li>🔒 Escape routes</li>
+                        <li>🔒 Survival mechanics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Token Requirements Section -->
+    <section id="requirements" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Token Requirements</h2>
+            <div class="requirements-content">
+                <div class="requirement-card">
+                    <h3>🎫 Entry Requirements</h3>
+                    <div class="requirement-details">
+                        <div class="requirement-item">
+                            <span class="req-label">Minimum Holdings:</span>
+                            <span class="req-value">0.001% of token supply</span>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="req-label">For 1B Supply Token:</span>
+                            <span class="req-value">10,000 tokens minimum</span>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="req-label">Supported Tokens:</span>
+                            <span class="req-value">All pump.fun tokens</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="requirement-card">
+                    <h3>⚙️ Technical Specs</h3>
+                    <div class="requirement-details">
+                        <div class="requirement-item">
+                            <span class="req-label">Blockchain:</span>
+                            <span class="req-value">Solana Network</span>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="req-label">Token Standard:</span>
+                            <span class="req-value">SPL Tokens</span>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="req-label">Real-time Verification:</span>
+                            <span class="req-value">Helius API</span>
+                        </div>
+                        <div class="requirement-item">
+                            <span class="req-label">Max Players:</span>
+                            <span class="req-value">2000+ concurrent</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creator Rewards Section -->
+    <section id="creator-rewards" class="section">
+        <div class="container">
+            <h2 class="section-title">Creator Rewards Program</h2>
+            <div class="rewards-intro">
+                <p class="rewards-description">
+                    Our creator rewards system ensures sustainable growth and continuous value delivery to the Sol Arena community. 
+                    Every reward earned goes directly back into making the platform bigger and better.
+                </p>
+            </div>
+            
+            <div class="rewards-grid">
+                <div class="reward-category">
+                    <div class="reward-icon">🏆</div>
+                    <h3>Winner Payouts</h3>
+                    <p>Creator rewards fund prize pools for game winners, scaling from small amounts to vast sums as our volume grows.</p>
+                    <ul class="reward-features">
+                        <li>Direct payments to battle royale winners</li>
+                        <li>Scaling prize pools with platform growth</li>
+                        <li>Immediate rewards to winners</li>
+                        <li>Incentivizing competitive gameplay</li>
+                    </ul>
+                </div>
+                
+                <div class="reward-category">
+                    <div class="reward-icon">📈</div>
+                    <h3>Marketing & Exposure</h3>
+                    <p>Strategic marketing investments to maximize Sol Arena's reach and attract more token holders to the ecosystem.</p>
+                    <ul class="reward-features">
+                        <li>DexScreener paid promotions</li>
+                        <li>DEX boosts and trending ads</li>
+                        <li>Token buybacks for giveaways</li>
+                        <li>Maximum exposure campaigns</li>
+                    </ul>
+                </div>
+                
+                <div class="reward-category">
+                    <div class="reward-icon">🔧</div>
+                    <h3>Platform Development</h3>
+                    <p>Continuous platform improvements and new feature development to keep Sol Arena at the cutting edge of gaming.</p>
+                    <ul class="reward-features">
+                        <li>New game mode development</li>
+                        <li>Enhanced graphics and effects</li>
+                        <li>Performance optimizations</li>
+                        <li>Community-requested features</li>
+                    </ul>
+                </div>
+                
+                <div class="reward-category">
+                    <div class="reward-icon">🚀</div>
+                    <h3>Future Expansion</h3>
+                    <p>This is just the beginning - creator rewards fuel our vision for bigger and better games across the Solana ecosystem.</p>
+                    <ul class="reward-features">
+                        
+                        <li>Advanced tournament systems</li>
+                        <li>Next-generation gaming experiences</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="rewards-vision">
+                <div class="vision-card">
+                    <h3>🌟 The Vision</h3>
+                    <p>
+                        Sol Arena is just the beginning of our journey to revolutionize token-gated gaming on Solana. 
+                        As we grow, creator rewards enable us to build bigger prize pools, develop more sophisticated games, 
+                        and create an entire ecosystem where token holders can compete, win, and thrive.
+                    </p>
+                    <div class="vision-stats">
+                        <div class="vision-stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Rewards Reinvested</span>
+                        </div>
+                        <div class="vision-stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Growth Potential</span>
+                        </div>
+                        <div class="vision-stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="play" class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Watch the Action?</h2>
+                <p class="cta-description">
+                    Follow our live streams on pump.fun to watch epic battles unfold in real-time. 
+                    Get your tokens ready for when we launch public games!
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://pump.fun/live/GSLndYGurTE25vsJEz8xK38KmrBZXhScDNmsPBmARENA" target="_blank" class="btn btn-primary btn-large">
+                        <span>🎬 WATCH LIVE STREAM</span>
+                    </a>
+                    <a href="https://pump.fun/GSLndYGurTE25vsJEz8xK38KmrBZXhScDNmsPBmARENA" target="_blank" class="btn btn-secondary btn-large">
+                        <span>🪙 GET ARENA TOKENS</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>
+                        <span class="title-sol">SOL</span>
+                        <span class="title-arena">ARENA</span>
+                    </h3>
+                    <p>The future of token-gated gaming</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Game</h4>
+                        <ul>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#rules">Rules</a></li>
+                            <li><a href="#modes">Game Modes</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="#" target="_blank">Twitter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="https://pump.fun" target="_blank">Pump.fun</a></li>
+                            <li><a href="https://solscan.io" target="_blank">Solscan</a></li>
+                            <li><a href="#requirements">Requirements</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Sol Arena. Built on Solana. Powered by pump.fun tokens.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
