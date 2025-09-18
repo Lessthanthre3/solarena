@@ -102,8 +102,15 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 statNumbers.forEach(stat => {
-                    const target = parseInt(stat.textContent.replace(/[^\d]/g, ''));
-                    animateCounter(stat, target);
+                    const originalText = stat.textContent;
+                    // Skip infinity symbol and other non-numeric values
+                    if (originalText.includes('∞') || originalText === '24/7') {
+                        return; // Don't animate these
+                    }
+                    const target = parseInt(originalText.replace(/[^\d]/g, ''));
+                    if (!isNaN(target)) {
+                        animateCounter(stat, target);
+                    }
                 });
                 heroObserver.unobserve(entry.target);
             }
