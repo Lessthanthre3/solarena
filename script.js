@@ -1,5 +1,47 @@
 // Sol Arena Marketing Site JavaScript
 
+// Tab Navigation System
+function showSection(sectionName) {
+    // Hide all content sections
+    const allSections = document.querySelectorAll('.content-section');
+    allSections.forEach(section => {
+        section.classList.remove('active');
+    });
+    
+    // Show sections for the selected tab
+    const targetSections = document.querySelectorAll(`[data-section="${sectionName}"]`);
+    targetSections.forEach(section => {
+        section.classList.add('active');
+    });
+    
+    // Update active tab
+    const allTabs = document.querySelectorAll('.nav-tab');
+    allTabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Find and activate the clicked tab
+    const activeTab = document.querySelector(`[onclick="showSection('${sectionName}')"]`);
+    if (activeTab) {
+        activeTab.classList.add('active');
+    }
+    
+    // Smooth scroll to content area
+    const contentAnchor = document.getElementById('content');
+    if (contentAnchor) {
+        contentAnchor.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
+// Initialize default section on page load
+function initializeNavigation() {
+    // Show overview sections by default
+    showSection('overview');
+}
+
 // Copy contract address function
 function copyContract() {
     const contractAddress = document.getElementById('contractAddress').textContent;
@@ -28,6 +70,9 @@ function copyContract() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize navigation system
+    initializeNavigation();
+    
     // Smooth scrolling for navigation links
     const links = document.querySelectorAll('a[href^="#"]');
     

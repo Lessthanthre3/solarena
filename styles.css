@@ -317,13 +317,12 @@ body::before {
 }
 
 .step-card {
-  background: linear-gradient(145deg, rgba(15, 15, 35, 0.6) 0%, rgba(26, 26, 46, 0.4) 100%);
+  background: rgba(120, 219, 226, 0.05);
   border: 1px solid rgba(120, 219, 226, 0.2);
-  border-radius: 20px;
-  padding: 2.5rem;
+  border-radius: 15px;
+  padding: 35px 25px;
   text-align: center;
-  backdrop-filter: blur(15px);
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -337,7 +336,7 @@ body::before {
   height: 3px;
   background: linear-gradient(90deg, #78dbe2, #ff77c6);
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease;
 }
 
 .step-card:hover::before {
@@ -345,44 +344,39 @@ body::before {
 }
 
 .step-card:hover {
-  transform: translateY(-8px);
+  background: rgba(120, 219, 226, 0.08);
   border-color: rgba(120, 219, 226, 0.4);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(120, 219, 226, 0.2);
 }
 
 .step-number {
-  font-size: 1rem;
-  font-weight: 600;
-  color: rgba(120, 219, 226, 0.8);
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-}
-
-.step-icon {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  display: block;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.token-icon {
-  width: 3rem;
-  height: 3rem;
-  object-fit: contain;
-  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+  display: inline-block;
+  background: linear-gradient(45deg, #78dbe2, #ff77c6);
+  color: #0f0f23;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  font-family: 'Orbitron', monospace;
 }
 
 .step-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #ffffff;
+  color: #78dbe2;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  font-family: 'Orbitron', monospace;
+  text-shadow: 0 0 10px rgba(120, 219, 226, 0.3);
 }
 
 .step-card p {
-  color: rgba(224, 230, 255, 0.7);
+  color: #e0e6ff;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
   line-height: 1.6;
 }
 
@@ -957,5 +951,471 @@ body::before {
   
   .footer-links {
     grid-template-columns: 1fr;
+  }
+}
+
+/* FAQ Section */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.faq-item {
+  background: rgba(120, 219, 226, 0.05);
+  border: 1px solid rgba(120, 219, 226, 0.2);
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  background: rgba(120, 219, 226, 0.08);
+  border-color: rgba(120, 219, 226, 0.4);
+  transform: translateY(-5px);
+}
+
+.faq-question {
+  color: #78dbe2;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.faq-answer {
+  color: #b8c5ff;
+  line-height: 1.7;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+/* Whitepaper Section */
+.whitepaper-content {
+  max-width: 900px;
+  margin: 50px auto 0;
+}
+
+.wp-section {
+  background: rgba(120, 219, 226, 0.03);
+  border: 1px solid rgba(120, 219, 226, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.wp-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #78dbe2, #ff77c6, #78dbe2);
+  border-radius: 20px 20px 0 0;
+}
+
+.wp-section h3 {
+  color: #78dbe2;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(120, 219, 226, 0.3);
+}
+
+.wp-section h4 {
+  color: #ff77c6;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 25px 0 15px 0;
+}
+
+.wp-section p {
+  color: #b8c5ff;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.wp-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.wp-section li {
+  color: #e0e6ff;
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.wp-section li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: #78dbe2;
+  font-size: 12px;
+}
+
+.wp-section li strong {
+  color: #ff77c6;
+}
+
+/* Power-ups Section */
+.powerups-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.powerup-category h3 {
+  color: #78dbe2;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 0 0 20px rgba(120, 219, 226, 0.3);
+}
+
+.powerup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.powerup-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: rgba(120, 219, 226, 0.05);
+  border: 1px solid rgba(120, 219, 226, 0.15);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.powerup-item:hover {
+  background: rgba(120, 219, 226, 0.08);
+  border-color: rgba(120, 219, 226, 0.3);
+  transform: translateY(-2px);
+}
+
+.powerup-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 119, 198, 0.1);
+  border-radius: 8px;
+}
+
+.powerup-info h4 {
+  color: #ff77c6;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.powerup-info p {
+  color: #b8c5ff;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.powerup-note {
+  background: rgba(255, 119, 198, 0.05);
+  border: 1px solid rgba(255, 119, 198, 0.2);
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.powerup-note h4 {
+  color: #ff77c6;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}
+
+.powerup-note p {
+  color: #e0e6ff;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Enhanced CTA Stats */
+.cta-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.cta-stat {
+  text-align: center;
+}
+
+.cta-stat .stat-number {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: #78dbe2;
+  text-shadow: 0 0 20px rgba(120, 219, 226, 0.5);
+  margin-bottom: 8px;
+}
+
+.cta-stat .stat-label {
+  color: #b8c5ff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Navigation Header */
+.navigation-header {
+  background: rgba(15, 15, 35, 0.98);
+  border-bottom: 2px solid rgba(120, 219, 226, 0.3);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-brand {
+  justify-self: start;
+}
+
+.brand-title {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+  justify-self: center;
+}
+
+.header-actions {
+  justify-self: end;
+}
+
+.header-btn {
+  background: linear-gradient(45deg, #78dbe2, #ff77c6);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: #0f0f23;
+  font-family: 'Orbitron', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.header-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(120, 219, 226, 0.4);
+}
+
+.nav-tab {
+  background: rgba(120, 219, 226, 0.05);
+  border: 1px solid rgba(120, 219, 226, 0.2);
+  border-radius: 10px;
+  padding: 12px 20px;
+  color: #b8c5ff;
+  font-family: 'Orbitron', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: center;
+}
+
+.nav-tab:hover {
+  background: rgba(120, 219, 226, 0.1);
+  border-color: rgba(120, 219, 226, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(120, 219, 226, 0.2);
+}
+
+.nav-tab.active {
+  background: linear-gradient(45deg, rgba(120, 219, 226, 0.2), rgba(255, 119, 198, 0.2));
+  border-color: #78dbe2;
+  color: #78dbe2;
+  box-shadow: 0 0 20px rgba(120, 219, 226, 0.3);
+}
+
+.tab-icon {
+  font-size: 14px;
+}
+
+.tab-text {
+  font-weight: 600;
+  font-size: 11px;
+}
+
+/* Content Section Management */
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Responsive Design for New Sections */
+@media (max-width: 768px) {
+  .header-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .header-brand,
+  .nav-tabs,
+  .header-actions {
+    justify-self: center;
+  }
+  
+  .brand-title {
+    font-size: 24px;
+  }
+  
+  .nav-tabs {
+    gap: 4px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-tab {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+  
+  .tab-text {
+    font-size: 10px;
+  }
+  
+  .header-btn {
+    font-size: 11px;
+    padding: 8px 14px;
+  }
+  
+  .powerups-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .powerup-item {
+    padding: 15px;
+  }
+  
+  .powerup-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  
+  .powerup-info h4 {
+    font-size: 14px;
+  }
+  
+  .powerup-info p {
+    font-size: 13px;
+  }
+  
+  .powerup-note {
+    padding: 20px;
+  }
+  
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .faq-item {
+    padding: 20px;
+  }
+  
+  .faq-question {
+    font-size: 16px;
+  }
+  
+  .wp-section {
+    padding: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .wp-section h3 {
+    font-size: 20px;
+  }
+  
+  .wp-section h4 {
+    font-size: 16px;
+  }
+  
+  .cta-stats {
+    gap: 30px;
+  }
+  
+  .cta-stat .stat-number {
+    font-size: 24px;
   }
 }
